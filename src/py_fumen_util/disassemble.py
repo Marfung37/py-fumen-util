@@ -188,7 +188,7 @@ def disassemble(fumen_codes, print_error=True, keep_invalid=True):
             input_pages = decode(code)
             this_disassembles = []
             for page in input_pages:
-                field, _ = remove_line_clears(page.field.copy())
+                field = page.field
                 empty_field = make_empty_field(field)
                 all_pieces_arr.clear()
 
